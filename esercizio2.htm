@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatore e Tabelline</title>
+</head>
+<body>
+
+<script>
+  let contatore = 1;
+
+  function stampaTabellina(numero) {
+    let tabellinaOutput = "<p>Tabellina del " + numero + ":</p>";
+    for (let i = 1; i <= 10; i++) {
+      tabellinaOutput += numero * i + "<br>";
+    }
+    document.getElementById("output").innerHTML = tabellinaOutput;
+  }
+
+  function avviaContatore() {
+    const intervallo = setInterval(() => {
+      console.log(contatore);
+      stampaTabellina(contatore);
+
+      contatore++;
+
+      if (contatore > 10) {
+        clearInterval(intervallo);
+      }
+    }, 1000);
+  }
+
+  avviaContatore();
+</script>
+
+<div id="output"></div>
+
+</body>
+</html>
