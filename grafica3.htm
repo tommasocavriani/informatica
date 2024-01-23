@@ -1,0 +1,45 @@
+
+LUISO ALESSIO
+10:43 (0 minuti fa)
+a me, ROEMER
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quadrati</title>
+  <style>
+    .square {
+      width: 10px;
+      height: 10px;
+      margin: 2px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    for (let i = 1; i <= 100; i++) {
+      let square = document.createElement('div');
+      square.className = 'square';
+
+      if (i % 2 === 0) {
+        // Numero pari: quadrato con sfondo grigio chiaro e bordo nero
+        square.style.backgroundColor = '#eee';
+        square.style.border = '1px solid #000';
+      } else {
+        // Numero dispari: quadrato con sfondo grigio scuro
+        square.style.backgroundColor = '#666';
+      }
+
+      document.body.appendChild(square);
+
+      // Vai a capo ogni 10 numeri
+      if (i % 10 === 0) {
+        document.body.appendChild(document.createElement('br'));
+      }
+    }
+  </script>
+</body>
+</html>
