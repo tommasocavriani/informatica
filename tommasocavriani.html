@@ -11,8 +11,21 @@
       width: 10px;
       height: 10px;
       border: 1px solid black;
+      display: none;
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var dropdownItem = document.querySelector(".dropdown-item");
+      var squares = document.querySelectorAll(".square");
+
+      dropdownItem.addEventListener("click", function() {
+        squares.forEach(function(square) {
+          square.style.display = "block";
+        });
+      });
+    });
+  </script>
 </head>
 <body>
  
@@ -86,7 +99,6 @@
       <div class="square"></div>
     </div>
   </div>
-
 </div>
 
 </body>
